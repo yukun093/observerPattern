@@ -1,13 +1,13 @@
-#ifndef __ConcreteSubject_H__
-#define __ConcreteSubject_H__
+#ifndef __BasketballFactory_H__
+#define __BasketballFactory_H__
 
 #include <iostream>
 #include "Subject.h"
 
-class ConcreteSubject : public Subject
+class BasketballFactory : public Subject
 {
 public:
-    ~ConcreteSubject() {}
+    ~BasketballFactory() {}
 
     float getPrice()
     {

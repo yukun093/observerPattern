@@ -14,16 +14,16 @@ public:
         observers.push_back(observer);
     }
 
-    void detach( const int index )
+    void detach(const int index )  // vector has no corresponding function to remove the subject
     {
-        observers.erase( observers.begin() + index );
+        observers.erase(observers.begin() + index);
     }
 
     void notify()
     {
         for ( unsigned int i = 0; i < observers.size(); i++ )
         {
-            observers.at( i )->update( this );
+            observers.at(i)->update(this);
         }
     }
 
