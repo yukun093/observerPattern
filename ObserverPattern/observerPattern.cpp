@@ -14,14 +14,14 @@ int main(){
     ConcreteObserver supermarket2(29.5);
     ConcreteObserver sportcenter1(35.5);
 
-    std::cout << "original observer price is " << supermarket1.getPrice() << std::endl;
-    std::cout << "original observer price is " << supermarket2.getPrice() << std::endl;
-    std::cout << "original observer price is " << sportcenter1.getPrice() << std::endl;
-
     Subject *subject = new BasketballFactory();
     subject->attach(&supermarket1);
     subject->attach(&supermarket2);
     subject->attach(&sportcenter1);
+
+    std::cout << "original observer price is " << supermarket1.getPrice() << std::endl;
+    std::cout << "original observer price is " << supermarket2.getPrice() << std::endl;
+    std::cout << "original observer price is " << sportcenter1.getPrice() << std::endl;
 
     // modify price at factory
     float s = 25.5;
@@ -42,7 +42,7 @@ int main(){
         }
 
         else if(s == 40.5){
-            subject->detach(2);
+            subject->detach(2);  // sportcneter2 as another Observer object will also stop increasing the price if the original price is too high
         }
         
         std::cout << std::endl;

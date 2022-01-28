@@ -6,9 +6,9 @@
 
 int main(){
     
-    ConcreteObserver observer1(19.5);
-    ConcreteObserver observer2(25.5);
-
+    ConcreteObserver observer1(19);  //input a integer
+    ConcreteObserver observer2(25);
+    
     std::cout << "observer state is " << observer1.getState() << std::endl;
     std::cout << "observer state is " << observer2.getState() << std::endl;
 
